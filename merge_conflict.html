@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Merge Conflict and Commands</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        p {
+            line-height: 1.6;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Git Merge Conflict and Commands</h1>
+    </header>
+    <main>
+        <section id="merge-conflict">
+            <h2>What is a Merge Conflict?</h2>
+            <p>A merge conflict in Git occurs when two branches have diverged, and Git cannot automatically merge the changes. This typically happens when two branches have modified the same part of a file, and Git is unable to determine which change to accept.</p>
+        </section>
+        <section id="command">
+            <h2>Resolving Merge Conflicts</h2>
+            <p>When a merge conflict occurs, you need to resolve it manually. Git marks the conflicted areas in the affected files, and you must edit the files to resolve the conflicts. Here are the steps to resolve a merge conflict:</p>
+            <ol>
+                <li>Identify the conflicted files using <code>git status</code>.</li>
+                <li>Open the conflicted files in a text editor.</li>
+                <li>Locate and resolve the conflict markers (<<<<<<<, =======, and >>>>>>>).</li>
+                <li>Save the changes.</li>
+                <li>Add the resolved files to the staging area using <code>git add &lt;resolved-file&gt;</code>.</li>
+                <li>Complete the merge by committing the changes using <code>git commit</code>.</li>
+            </ol>
+        </section>
+        <section id="example">
+            <h2>Example</h2>
+            <p>Let's say you are merging changes from a feature branch into the main branch, but a merge conflict occurs in a file named <code>example.txt</code>. To resolve the conflict:</p>
+            <ol>
+                <li>Open <code>example.txt</code> in a text editor.</li>
+                <li>Locate and resolve the conflict markers.</li>
+                <li>Save the changes.</li>
+                <li>Add the resolved file to the staging area:</li>
+                <code>git add example.txt</code>
+                <li>Commit the changes:</li>
+                <code>git commit -m "Resolved merge conflict"</code>
+            </ol>
+            <p>After resolving the conflict and committing the changes, the merge is complete.</p>
+        </section>
+    </main>
+</body>
+</html>
