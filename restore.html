@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Restore Command</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        p {
+            line-height: 1.6;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Git Restore Command</h1>
+    </header>
+    <main>
+        <section id="restore">
+            <h2>What is Git Restore?</h2>
+            <p>Git restore is a command in Git that allows you to restore files or directories in your working directory to their state at a specific commit or to discard changes made since the last commit. It is useful for undoing changes and reverting to a known state.</p>
+        </section>
+        <section id="command">
+            <h2>Git Restore Commands</h2>
+            <p>To restore a specific file or directory to its state at a specific commit, you can use:</p>
+            <code>git restore --source=&lt;commit&gt; --staged --worktree &lt;file&gt;</code>
+            <p>This command restores the specified file or directory to its state at the given commit. The <code>--staged</code> option restores the file in the staging area, and the <code>--worktree</code> option restores it in the working directory.</p>
+            <p>To discard changes made to a specific file in the working directory and restore it to the state of the last commit, you can use:</p>
+            <code>git restore --source=HEAD --staged --worktree &lt;file&gt;</code>
+            <p>This command discards changes made to the specified file and restores it to the state of the last commit.</p>
+            <p>If you want to discard all changes made to the entire working directory and restore it to the state of the last commit, you can use:</p>
+            <code>git restore .</code>
+            <p>This command discards all changes made to the working directory and restores it to the state of the last commit.</p>
+        </section>
+        <section id="example">
+            <h2>Example Usage</h2>
+            <p>Let's consider a scenario where you made some changes to a file but later realized that those changes were incorrect. To discard those changes and restore the file to its state at the last commit, you can use:</p>
+            <code>git restore --source=HEAD --staged --worktree &lt;file&gt;</code>
+            <p>This command will revert the file to its state at the last commit, effectively undoing the changes you made.</p>
+        </section>
+    </main>
+</body>
+</html>
