@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Stash Command</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        p {
+            line-height: 1.6;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Git Stash Command</h1>
+    </header>
+    <main>
+        <section id="stash">
+            <h2>What is Git Stash?</h2>
+            <p>Git stash is a command in Git that allows you to temporarily save your local modifications without committing them to a branch. It is particularly useful when you need to switch branches or perform other operations without committing your current changes.</p>
+        </section>
+        <section id="command">
+            <h2>Git Stash Command</h2>
+            <p>To stash your changes, you can use the following command:</p>
+            <code>git stash</code>
+            <p>This command will stash (save) your modifications in a "stash" and revert your working directory to the state of the last commit.</p>
+            <p>Later, when you want to apply the stashed changes back to your working directory, you can use:</p>
+            <code>git stash apply</code>
+            <p>This command will apply the most recently stashed changes to your working directory.</p>
+            <p>If you have multiple stashes, you can specify which one to apply using:</p>
+            <code>git stash apply stash@{n}</code>
+            <p>where <code>n</code> is the index of the stash you want to apply.</p>
+        </section>
+        <section id="example">
+            <h2>Example Usage</h2>
+            <p>Let's consider a scenario where you are working on a feature branch, but you need to switch to another branch to fix a critical bug. Instead of committing your changes or losing them, you can stash them:</p>
+            <code>git stash</code>
+            <p>After fixing the bug and committing the changes, you can switch back to your feature branch and apply the stashed changes:</p>
+            <code>git stash apply</code>
+            <p>This way, you can seamlessly switch between branches without losing your work.</p>
+        </section>
+    </main>
+</body>
+</html>
