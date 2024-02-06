@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Rebase Command</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        p {
+            line-height: 1.6;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Git Rebase Command</h1>
+    </header>
+    <main>
+        <section id="rebase">
+            <h2>What is Git Rebase?</h2>
+            <p>Git rebase is a command in Git that allows you to reapply commits on top of another branch. It is often used to maintain a linear project history and incorporate changes from one branch into another.</p>
+        </section>
+        <section id="command">
+            <h2>Git Rebase Command</h2>
+            <p>To rebase your current branch onto another branch, you can use:</p>
+            <code>git rebase &lt;base-branch&gt;</code>
+            <p>This command replays the commits from your current branch on top of the <code>&lt;base-branch&gt;</code>.</p>
+            <p>If you encounter conflicts during the rebase process, you need to resolve them manually and continue the rebase using:</p>
+            <code>git rebase --continue</code>
+            <p>This command continues the rebase process after resolving conflicts.</p>
+            <p>If you want to abort the rebase operation and return to the state before the rebase started, you can use:</p>
+            <code>git rebase --abort</code>
+            <p>This command aborts the rebase process and restores the original branch state.</p>
+        </section>
+        <section id="example">
+            <h2>Example Usage</h2>
+            <p>Let's say you have a feature branch <code>feature-branch</code> and you want to rebase it onto the <code>main</code> branch:</p>
+            <ol>
+                <li>Checkout the feature branch:</li>
+                <code>git checkout feature-branch</code>
+                <li>Rebase the feature branch onto main:</li>
+                <code>git rebase main</code>
+            </ol>
+            <p>If conflicts occur during the rebase, resolve them manually, add the resolved files, and continue the rebase using <code>git rebase --continue</code>.</p>
+        </section>
+    </main>
+</body>
+</html>
