@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Branches and Commands</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        p {
+            line-height: 1.6;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Git Branches and Commands</h1>
+    </header>
+    <main>
+        <section id="branch">
+            <h2>What are Git Branches?</h2>
+            <p>In Git, a branch is a lightweight movable pointer to a commit. It allows you to work on different versions of your project concurrently, without affecting the main codebase. Branches are commonly used for feature development, bug fixes, and experimenting with new ideas.</p>
+        </section>
+        <section id="command">
+            <h2>Git Branch Commands</h2>
+            <p>To list all branches in your repository, you can use:</p>
+            <code>git branch</code>
+            <p>This command will display a list of all branches in your repository, with an asterisk (*) indicating the current branch.</p>
+            <p>To create a new branch, you can use:</p>
+            <code>git branch &lt;branch-name&gt;</code>
+            <p>This command creates a new branch with the specified name.</p>
+            <p>To switch to a different branch, you can use:</p>
+            <code>git checkout &lt;branch-name&gt;</code>
+            <p>This command switches your working directory to the specified branch.</p>
+            <p>To create a new branch and switch to it in one step, you can use:</p>
+            <code>git checkout -b &lt;new-branch-name&gt;</code>
+            <p>This command creates a new branch with the specified name and switches to it.</p>
+            <p>To update the name of a branch, you can use:</p>
+            <code>git branch -m &lt;old-branch-name&gt; &lt;new-branch-name&gt;</code>
+            <p>This command renames the specified branch from <code>old-branch-name</code> to <code>new-branch-name</code>.</p>
+            <p>To delete a branch, you can use:</p>
+            <code>git branch -d &lt;branch-name&gt;</code>
+            <p>This command deletes the specified branch. Note that you cannot delete the branch you are currently on.</p>
+        </section>
+        <section id="merge">
+            <h2>Merging Branches</h2>
+            <p>To merge changes from one branch into another, you can use:</p>
+            <code>git merge &lt;source-branch&gt;</code>
+            <p>This command incorporates changes from the <code>source-branch</code> into the current branch.</p>
+        </section>
+        <section id="example">
+            <h2>Example Usage</h2>
+            <p>Let's say you want to update the name of an existing branch from <code>feature-branch</code> to <code>new-feature-branch</code>:</p>
+            <code>git branch -m feature-branch new-feature-branch</code>
+            <p>Now, you want to merge changes from <code>new-feature-branch</code> into the main branch:</p>
+            <code>git checkout main</code><br>
+            <code>git merge new-feature-branch</code>
+            <p>This will merge the changes from <code>new-feature-branch</code> into the main branch.</p>
+        </section>
+    </main>
+</body>
+</html>
