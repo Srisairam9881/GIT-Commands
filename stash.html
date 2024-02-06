@@ -51,14 +51,19 @@
             <p>Git stash is a command in Git that allows you to temporarily save your local modifications without committing them to a branch. It is particularly useful when you need to switch branches or perform other operations without committing your current changes.</p>
         </section>
         <section id="command">
-            <h2>Git Stash Command</h2>
-            <p>To stash your changes, you can use the following command:</p>
+            <h2>Git Stash Commands</h2>
+            <p>To stash your changes, you can use:</p>
             <code>git stash</code>
             <p>This command will stash (save) your modifications in a "stash" and revert your working directory to the state of the last commit.</p>
-            <p>Later, when you want to apply the stashed changes back to your working directory, you can use:</p>
+            <p>If you want to stash and include an optional message, you can use:</p>
+            <code>git stash save "message"</code>
+            <p>This command will stash your changes with the specified message.</p>
+            <p>To view the list of stashes, you can use:</p>
+            <code>git stash list</code>
+            <p>This command will display a list of all stashes along with their indexes and optional messages.</p>
+            <p>To apply the most recently stashed changes to your working directory, you can use:</p>
             <code>git stash apply</code>
-            <p>This command will apply the most recently stashed changes to your working directory.</p>
-            <p>If you have multiple stashes, you can specify which one to apply using:</p>
+            <p>To apply a specific stash from the list, you can use:</p>
             <code>git stash apply stash@{n}</code>
             <p>where <code>n</code> is the index of the stash you want to apply.</p>
         </section>
