@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Squash Command</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        p {
+            line-height: 1.6;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Git Squash Command</h1>
+    </header>
+    <main>
+        <section id="squash">
+            <h2>What is Git Squash?</h2>
+            <p>Git squash is a technique used to combine multiple commits into a single commit. It is particularly useful for cleaning up commit history and creating concise, meaningful commits.</p>
+        </section>
+        <section id="command">
+            <h2>Git Squash Command</h2>
+            <p>To squash multiple commits into a single commit, you can use an interactive rebase:</p>
+            <code>git rebase -i HEAD~&lt;n&gt;</code>
+            <p>This command opens an interactive rebase window where you can choose which commits to squash. Replace <code>&lt;n&gt;</code> with the number of commits you want to squash.</p>
+            <p>In the interactive rebase window, change the word "pick" to "squash" (or "s") for the commits you want to squash:</p>
+            <pre><code>pick 1a2b3c Commit message 1
+squash 4d5e6f Commit message 2
+squash 7g8h9i Commit message 3</code></pre>
+            <p>Save and close the rebase window. Git will then combine the selected commits into a single commit.</p>
+        </section>
+        <section id="example">
+            <h2>Example Usage</h2>
+            <p>Let's say you have made several small commits while working on a feature branch, but you want to combine them into one meaningful commit before merging the branch into the main branch:</p>
+            <ol>
+                <li>Run an interactive rebase for the last 3 commits:</li>
+                <code>git rebase -i HEAD~3</code>
+                <li>In the interactive rebase window, change the commits to squash:</li>
+                <pre><code>pick 1a2b3c Implement feature A
+squash 4d5e6f Fix bug in feature A
+squash 7g8h9i Update documentation for feature A</code></pre>
+                <li>Save and close the rebase window.</li>
+                <li>Git will combine the selected commits into one commit. You can edit the commit message if needed.</li>
+            </ol>
+        </section>
+    </main>
+</body>
+</html>

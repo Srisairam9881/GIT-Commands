@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Reset Command</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        p {
+            line-height: 1.6;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Git Reset Command</h1>
+    </header>
+    <main>
+        <section id="reset">
+            <h2>What is Git Reset?</h2>
+            <p>Git reset is a command in Git that is used to reset the current branch to a specific state. It is commonly used to undo changes, unstage files, or move the HEAD pointer to a different commit.</p>
+        </section>
+        <section id="command">
+            <h2>Git Reset Commands</h2>
+            <p>To undo changes in the working directory and staging area for a specific file, you can use:</p>
+            <code>git reset HEAD &lt;file&gt;</code>
+            <p>This command unstages the changes for the specified file, but it does not discard the changes in the working directory.</p>
+            <p>To undo changes in the working directory and staging area for all files, you can use:</p>
+            <code>git reset HEAD</code>
+            <p>This command unstages all changes, but it does not discard the changes in the working directory.</p>
+            <p>To move the HEAD pointer to a specific commit and reset the staging area and working directory to match that commit, you can use:</p>
+            <code>git reset --hard &lt;commit&gt;</code>
+            <p>This command resets the HEAD pointer to the specified commit and discards all changes in the staging area and working directory.</p>
+        </section>
+        <section id="example">
+            <h2>Example Usage</h2>
+            <p>Let's say you have made some changes and staged them for commit, but you decide to undo the staging for a specific file:</p>
+            <ol>
+                <li>Run the reset command:</li>
+                <code>git reset HEAD &lt;file&gt;</code>
+                <li>This will unstage the changes for the specified file, but keep the changes in the working directory.</li>
+            </ol>
+            <p>If you want to completely discard the changes and move the HEAD pointer to a specific commit:</p>
+            <ol>
+                <li>Run the reset command with the --hard option:</li>
+                <code>git reset --hard &lt;commit&gt;</code>
+                <li>This will reset the staging area and working directory to match the specified commit, discarding all changes.</li>
+            </ol>
+        </section>
+    </main>
+</body>
+</html>

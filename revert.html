@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Revert Command</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        p {
+            line-height: 1.6;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Git Revert Command</h1>
+    </header>
+    <main>
+        <section id="revert">
+            <h2>What is Git Revert?</h2>
+            <p>Git revert is a command in Git that is used to undo changes made in a commit by creating a new commit. It is often used to reverse the effects of a previous commit without altering the commit history.</p>
+        </section>
+        <section id="command">
+            <h2>Git Revert Command</h2>
+            <p>To revert a commit, you can use:</p>
+            <code>git revert &lt;commit&gt;</code>
+            <p>This command creates a new commit that undoes the changes introduced by the specified <code>&lt;commit&gt;</code>.</p>
+            <p>If you want to revert a range of commits, you can specify a commit range:</p>
+            <code>git revert &lt;start-commit&gt;..&lt;end-commit&gt;</code>
+            <p>This command creates a new commit that undoes the changes introduced by the commits in the specified range.</p>
+        </section>
+        <section id="example">
+            <h2>Example Usage</h2>
+            <p>Let's say you have made a commit that introduces a bug, and you want to revert it:</p>
+            <ol>
+                <li>Identify the commit you want to revert using <code>git log</code>.</li>
+                <li>Run the revert command:</li>
+                <code>git revert &lt;commit&gt;</code>
+                <li>Git will create a new commit that undoes the changes introduced by the specified commit.</li>
+            </ol>
+            <p>If you want to revert a range of commits, you can specify a commit range:</p>
+            <ol>
+                <li>Identify the range of commits you want to revert using <code>git log</code>.</li>
+                <li>Run the revert command with the commit range:</li>
+                <code>git revert &lt;start-commit&gt;..&lt;end-commit&gt;</code>
+                <li>Git will create a new commit that undoes the changes introduced by the commits in the specified range.</li>
+            </ol>
+        </section>
+    </main>
+</body>
+</html>
